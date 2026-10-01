@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leou Alven Comendador — Operations Leader · Builder</title>
-<meta name="description" content="Deputy Manager, Pharmacy Prior Authorizations at Optum Global Advantage. Builds software on the side: AIR:Rally, APRRC '27, Leovate, DataVerse and more.">
+<meta name="description" content="Deputy Manager, Pharmacy Prior Authorizations at Optum Global Advantage. Builds websites, web apps, and iOS apps on the side as ALVN: AIR/Rally, APRRC '27, KASSIX POS, DataVerse and more.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://leoudev.github.io/LeouComendador/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Leou Alven Comendador">
 <meta property="og:title" content="Leou Alven Comendador — Operations Leader · Builder">
-<meta property="og:description" content="Deputy Manager, Pharmacy Prior Authorizations at Optum Global Advantage. Builds software on the side: AIR:Rally, APRRC '27, Leovate, DataVerse and more.">
+<meta property="og:description" content="Deputy Manager, Pharmacy Prior Authorizations at Optum Global Advantage. Builds websites, web apps, and iOS apps on the side as ALVN: AIR/Rally, APRRC '27, KASSIX POS, DataVerse and more.">
 <meta property="og:url" content="https://leoudev.github.io/LeouComendador/">
 <meta property="og:image" content="https://leoudev.github.io/LeouComendador/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -93,7 +93,26 @@ section.block { padding: calc(3 * var(--leading)) 0; }
 .card-link:hover { color: var(--color-accent-600); text-decoration: underline; }
 .pcell.more { justify-content: center; background: var(--color-surface); }
 .pcell.more p { margin: 0; }
-@media (max-width: 720px) { .pgrid { grid-template-columns: 1fr; } .pcell.flag { grid-template-columns: 1fr; } }
+.pcell.wide { grid-column: 1 / -1; }
+.pgrid.three { grid-template-columns: repeat(3, 1fr); }
+.pgrid.three .p-foot { flex-direction: column; align-items: flex-start; gap: 2px; }
+.showcase { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--leading) clamp(24px, 4vw, 72px); align-items: center;
+  background: var(--navy); color: var(--cream); padding: calc(1.75 * var(--leading)) clamp(20px, 2.5vw, 36px); margin-bottom: calc(1.5 * var(--leading)); }
+.showcase .kicker { color: var(--color-accent-400); }
+.showcase .p-title { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.06; letter-spacing: -0.02em; }
+.showcase .url { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(20px, 2vw, 26px); color: var(--color-accent-400); text-decoration: none; display: inline-block; margin-top: var(--half); }
+.showcase .url:hover { text-decoration: underline; }
+.showcase .p-copy { color: color-mix(in srgb, var(--cream) 78%, transparent); margin-top: var(--half); }
+.showcase .stack { margin-top: var(--leading); }
+.showcase .tag { background: transparent; color: var(--cream); border-color: color-mix(in srgb, var(--cream) 40%, transparent); }
+.showcase .row { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--leading); }
+.showcase .btn-ghost { color: var(--cream); border: 1px solid var(--cream); }
+.showcase .btn-primary { background: var(--color-accent); color: var(--cream); border-color: var(--color-accent); }
+.showcase .shot { display: block; border: 2px solid color-mix(in srgb, var(--cream) 30%, transparent); transition: transform .3s; }
+.showcase .shot:hover { transform: translateY(-4px); }
+.showcase .shot img { display: block; width: 100%; height: auto; }
+@media (max-width: 960px) { .showcase { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .pgrid, .pgrid.three { grid-template-columns: 1fr; } .pcell.flag { grid-template-columns: 1fr; } }
 
 /* ruled feature rows (accomplishments, experience) */
 .rows { border-top: 2px solid var(--color-divider); }
@@ -154,6 +173,7 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
 
 <nav class="nav" aria-label="Site">
   <a class="nav-brand" href="#top" style="font-size:16px">L. A. Comendador</a>
+  <a href="https://www.builtbyleou.info/" target="_blank" rel="noopener">builtbyleou.info ↗</a>
   <a href="#projects">Projects</a>
   <a href="#accomplishments">Accomplishments</a>
   <a href="#skills">Skills</a>
@@ -171,11 +191,12 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
       <img src="headshot.jpg" alt="Portrait of Leou Alven Comendador" width="480" height="560">
       <span class="tag">Available for opportunities</span>
     </figure>
-      <p class="role">Deputy Manager, Pharmacy Prior Authorizations at Optum Global Advantage. Builds software on the side.</p>
+      <p class="role">Deputy Manager, Pharmacy Prior Authorizations at Optum Global Advantage. On the side, builds websites, apps, and digital products as <a href="https://www.builtbyleou.info/" target="_blank" rel="noopener" style="color:var(--color-accent-700)">ALVN — Built by Leou</a>.</p>
       <p class="sub copy">Results-driven operations leader with <strong>6+ years</strong> of progressive leadership experience in BPO and healthcare environments. Proven expertise in <strong>pharmacy prior authorizations</strong>, team development, and process improvement — consistently raising the bar on quality, productivity, and team engagement.</p>
       <div class="row">
         <a href="#projects" class="btn btn-primary">View Projects</a>
         <a href="#experience" class="btn btn-secondary">View Experience</a>
+        <a href="https://www.builtbyleou.info/" class="btn btn-ghost ext" target="_blank" rel="noopener">Portfolio</a>
       </div>
     </div>
 
@@ -188,7 +209,7 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
       <div><p class="stat-num">60+</p><p class="stat-label">Team members led</p></div>
       <div><p class="stat-num">6+</p><p class="stat-label">Years in leadership</p></div>
       <div><p class="stat-num">6σ</p><p class="stat-label">Yellow Belt certified</p></div>
-      <div><p class="stat-num">6</p><p class="stat-label">Side projects shipped</p></div>
+      <div><p class="stat-num">11</p><p class="stat-label">Products built</p></div>
     </div>
   </section>
 
@@ -197,66 +218,135 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
   <section class="block" id="projects">
     <div class="section-head fade-up">
       <div><span class="kicker">Projects</span><h2>Built on the side</h2></div>
-      <p class="copy">Full-stack products, mostly on Next.js and Supabase. Ordered from most to least polished; the flagship is live.</p>
+      <p class="copy">Websites, web apps, and iOS apps — client work and my own products — published under <strong>ALVN</strong> at builtbyleou.info. From concept to launch.</p>
     </div>
+
+    <article class="showcase fade-up" aria-label="Portfolio">
+      <div>
+        <span class="kicker sq">Portfolio · Live</span>
+        <h3 class="p-title">ALVN — Built by Leou</h3>
+        <a class="url" href="https://www.builtbyleou.info/" target="_blank" rel="noopener">www.builtbyleou.info ↗</a>
+        <p class="p-copy">My digital product portfolio: the websites, web apps, and iOS apps I’ve taken from concept to launch — 11 products with full case studies, client testimonials, and the services I offer. ALVN is the brand; I’m the person behind it.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">Vercel</li><li class="tag tag-neutral">Product design</li></ul>
+        <div class="row">
+          <a class="btn btn-primary" href="https://www.builtbyleou.info/projects" target="_blank" rel="noopener">Explore the work</a>
+          <a class="btn btn-ghost ext" href="https://www.builtbyleou.info/" target="_blank" rel="noopener">Visit site</a>
+        </div>
+      </div>
+      <a class="shot" href="https://www.builtbyleou.info/" target="_blank" rel="noopener" aria-label="Open builtbyleou.info">
+        <img src="portfolio.jpg" alt="Home page of builtbyleou.info: ALVN, I turn business ideas into websites, apps, and digital products" width="1200" height="750" loading="lazy">
+      </a>
+    </article>
 
     <div class="pgrid">
       <article class="pcell flag fade-up">
         <div class="lead">
-          <div class="p-top"><p class="p-num">01</p><span class="p-status sq">Flagship · Live</span></div>
-          <h3 class="p-title">AIR:Rally</h3>
-          <p class="p-sub">Airbnb for pickleball courts</p>
-          <p class="p-copy">A pickleball court discovery and booking marketplace. Web app with an Expo / React Native mobile companion. The most actively developed project.</p>
+          <div class="p-top"><p class="p-num">01</p><span class="p-status sq">Flagship · Live on web &amp; iOS</span></div>
+          <h3 class="p-title">AIR/Rally</h3>
+          <p class="p-sub">Pickleball discovery and booking platform</p>
+          <p class="p-copy">Discovery, live court availability, booking, PayMongo payments, ranked play, and a social feed (COURT/Side) in one platform — on the web and in the iOS app, on a shared Supabase backend. Double bookings are blocked at the database. Concept, product design, and development across web and mobile.</p>
         </div>
         <div class="side">
           <ul class="stack" aria-label="Stack">
-            <li class="tag tag-neutral">Next.js 16</li><li class="tag tag-neutral">TypeScript</li><li class="tag tag-neutral">Tailwind</li><li class="tag tag-neutral">shadcn/ui</li><li class="tag tag-neutral">Supabase · Postgres</li><li class="tag tag-neutral">Auth · RLS · Storage</li><li class="tag tag-neutral">Stripe</li><li class="tag tag-neutral">Expo / React Native</li>
+            <li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">TypeScript</li><li class="tag tag-neutral">Tailwind CSS</li><li class="tag tag-neutral">React Native</li><li class="tag tag-neutral">Expo</li><li class="tag tag-neutral">Supabase</li><li class="tag tag-neutral">PayMongo</li><li class="tag tag-neutral">Vercel</li>
           </ul>
-          <div class="p-foot"><span class="muted" style="font-size:13px">air-rally.com</span><a class="card-link" href="https://air-rally.com" target="_blank" rel="noopener">Visit site</a></div>
+          <div class="p-foot"><a class="card-link" href="https://apps.apple.com/app/id6803324731" target="_blank" rel="noopener">App Store</a><a class="card-link" href="https://air-rally.com" target="_blank" rel="noopener">air-rally.com</a></div>
         </div>
       </article>
 
       <article class="pcell fade-up">
-        <div class="p-top"><p class="p-num">02</p><span class="p-status">Case study</span></div>
+        <div class="p-top"><p class="p-num">02</p><span class="p-status">Internal tool · Private</span></div>
+        <h3 class="p-title">Prior Authorization EMR</h3>
+        <p class="p-copy">A performance command center for a prior authorization team: imports the weekly performance workbook, checks every KPI against its threshold, and tracks the action items, scorecards, and quality audits that follow.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">TypeScript</li><li class="tag tag-neutral">Supabase</li><li class="tag tag-neutral">Drizzle ORM</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">No public link</span><a class="card-link" href="https://www.builtbyleou.info/projects/prior-authorization-emr" target="_blank" rel="noopener">Case study</a></div>
+      </article>
+
+      <article class="pcell fade-up">
+        <div class="p-top"><p class="p-num">03</p><span class="p-status">Client · Live</span></div>
         <h3 class="p-title">APRRC '27</h3>
-        <p class="p-copy">Official conference website plus a registration and admin dashboard for the Asia Pacific Regional Rotaract Conference — Cebu, May 2027.</p>
-        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js 16</li><li class="tag tag-neutral">Prisma</li><li class="tag tag-neutral">Supabase</li><li class="tag tag-neutral">PayMongo</li><li class="tag tag-neutral">Recharts</li></ul>
+        <p class="p-copy">Official website for the Asia Pacific Regional Rotaract Conference 2027 in Cebu, with an organizer dashboard (CSV import, registration charts) and a phone-first QR check-in app for event-day staff.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">Prisma</li><li class="tag tag-neutral">Supabase</li><li class="tag tag-neutral">Recharts</li><li class="tag tag-neutral">Radix UI</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">aprrc27cebuph.org</span><a class="card-link" href="https://www.aprrc27cebuph.org" target="_blank" rel="noopener">Visit site</a></div>
       </article>
 
       <article class="pcell fade-up">
-        <div class="p-top"><p class="p-num">03</p><span class="p-status">Case study</span></div>
-        <h3 class="p-title">Leovate</h3>
-        <p class="p-copy">A personal finance dashboard with budgeting, reporting, and PDF / Excel export.</p>
-        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">Prisma</li><li class="tag tag-neutral">NextAuth</li><li class="tag tag-neutral">Recharts</li></ul>
+        <div class="p-top"><p class="p-num">04</p><span class="p-status">Client · Live</span></div>
+        <h3 class="p-title">Roll Up Cinnamons</h3>
+        <p class="p-copy">Website and build-your-box ordering for a homemade bakery. Orders go straight to Messenger, and a phone-friendly admin publishes menu changes as commits that rebuild the site in about a minute.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">React</li><li class="tag tag-neutral">TypeScript</li><li class="tag tag-neutral">Vite</li><li class="tag tag-neutral">Tailwind CSS</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">rollup-cinnamon.online</span><a class="card-link" href="https://www.rollup-cinnamon.online" target="_blank" rel="noopener">Visit site</a></div>
       </article>
 
       <article class="pcell fade-up">
-        <div class="p-top"><p class="p-num">04</p><span class="p-status">Case study</span></div>
+        <div class="p-top"><p class="p-num">05</p><span class="p-status">Client · Live</span></div>
+        <h3 class="p-title">Fat Fueled</h3>
+        <p class="p-copy">Marketing website for an endurance coaching brand across triathlon, cycling, running, and swimming, built around the brand’s own race-day photography, with a server-validated enquiry form.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">Framer Motion</li><li class="tag tag-neutral">Brevo</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">fat-fueled.vercel.app</span><a class="card-link" href="https://fat-fueled.vercel.app" target="_blank" rel="noopener">Visit site</a></div>
+      </article>
+
+      <article class="pcell fade-up">
+        <div class="p-top"><p class="p-num">06</p><span class="p-status">Live</span></div>
+        <h3 class="p-title">KASSIX POS</h3>
+        <p class="p-copy">A point of sale for small businesses, with a Windows 98 look. Every sale runs as a single Postgres transaction that checks stock and computes totals on the server; Row Level Security keeps each store’s data private.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">Supabase</li><li class="tag tag-neutral">PostgreSQL</li><li class="tag tag-neutral">Zod</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">kassix-pos.vercel.app</span><a class="card-link" href="https://kassix-pos.vercel.app" target="_blank" rel="noopener">Visit site</a></div>
+      </article>
+
+      <article class="pcell fade-up">
+        <div class="p-top"><p class="p-num">07</p><span class="p-status">In development</span></div>
         <h3 class="p-title">DataVerse</h3>
-        <p class="p-sub">Turn Data Into Clarity</p>
-        <p class="p-copy">A visual, node-based data workflow and ETL builder.</p>
-        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Vite</li><li class="tag tag-neutral">React 19</li><li class="tag tag-neutral">TypeScript</li><li class="tag tag-neutral">React Flow</li><li class="tag tag-neutral">Supabase</li><li class="tag tag-neutral">Zustand</li></ul>
+        <p class="p-sub">Turn data into clarity</p>
+        <p class="p-copy">A visual data-workflow app: start from CSV or Excel, then clean, merge, group, pivot, and chart on a canvas — no formulas or Power Query required.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">React</li><li class="tag tag-neutral">Vite</li><li class="tag tag-neutral">React Flow</li><li class="tag tag-neutral">Zustand</li><li class="tag tag-neutral">Supabase</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">data-verse-pi.vercel.app</span><a class="card-link" href="https://data-verse-pi.vercel.app" target="_blank" rel="noopener">Visit site</a></div>
       </article>
 
       <article class="pcell fade-up">
-        <div class="p-top"><p class="p-num">05</p><span class="p-status">Case study</span></div>
-        <h3 class="p-title">Finance Tracker</h3>
-        <p class="p-copy">A Supabase-backed personal finance tracker with a static HTML / JS front end.</p>
-        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Supabase</li><li class="tag tag-neutral">HTML</li><li class="tag tag-neutral">JavaScript</li></ul>
+        <div class="p-top"><p class="p-num">08</p><span class="p-status">Private</span></div>
+        <h3 class="p-title">LAC Apex</h3>
+        <p class="p-copy">A personal financial command center: income, budgets, recurring bills, credit cards, loans, savings, investments, and net worth in one installable app, with PDF and Excel reports.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Next.js</li><li class="tag tag-neutral">Prisma</li><li class="tag tag-neutral">PostgreSQL</li><li class="tag tag-neutral">Auth.js</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">No public link</span><a class="card-link" href="https://www.builtbyleou.info/projects/lac-apex" target="_blank" rel="noopener">Case study</a></div>
       </article>
 
       <article class="pcell fade-up">
-        <div class="p-top"><p class="p-num">06</p><span class="p-status">Case study</span></div>
-        <h3 class="p-title">MyFinance PH</h3>
-        <p class="p-copy">An earlier finance-tracker experiment built as an offline-capable, installable PWA.</p>
-        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">PWA</li><li class="tag tag-neutral">Offline-capable</li><li class="tag tag-neutral">Installable</li></ul>
+        <div class="p-top"><p class="p-num">09</p><span class="p-status">iOS · Coming soon</span></div>
+        <h3 class="p-title">DICTA</h3>
+        <p class="p-copy">An iOS-first social network where every post is a designed quote card — 18 templates, 13 fonts, threaded comments, follows, and realtime activity.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Expo</li><li class="tag tag-neutral">React Native</li><li class="tag tag-neutral">Skia</li><li class="tag tag-neutral">Supabase</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">dicta-orcin.vercel.app</span><a class="card-link" href="https://www.builtbyleou.info/projects/dicta" target="_blank" rel="noopener">Case study</a></div>
       </article>
 
-      <aside class="pcell more fade-up">
-        <p class="p-title" style="font-size:20px">More on GitHub</p>
-        <p class="p-copy" style="flex:0">Source for public projects lives at github.com/LeouDev.</p>
-        <p><a class="card-link" href="https://github.com/LeouDev" target="_blank" rel="noopener">github.com/LeouDev</a></p>
+      <article class="pcell fade-up">
+        <div class="p-top"><p class="p-num">10</p><span class="p-status">iOS · Coming soon</span></div>
+        <h3 class="p-title">gastos</h3>
+        <p class="p-copy">A calm, local-first money tracker for iPhone, with a tested finance engine for wallets, credit cards, and recurring bills, plus a “safe to spend today” home-screen widget.</p>
+        <ul class="stack" aria-label="Stack"><li class="tag tag-neutral">Swift</li><li class="tag tag-neutral">SwiftUI</li><li class="tag tag-neutral">SwiftData</li><li class="tag tag-neutral">WidgetKit</li></ul>
+        <div class="p-foot"><span class="muted" style="font-size:13px">gastos-eta-one.vercel.app</span><a class="card-link" href="https://www.builtbyleou.info/projects/gastos" target="_blank" rel="noopener">Case study</a></div>
+      </article>
+
+      <aside class="pcell more wide fade-up">
+        <p class="p-title" style="font-size:20px">Full catalog at builtbyleou.info</p>
+        <p class="p-copy" style="flex:0">Case studies, screenshots, and concept work like F2A Cars. Source for public projects lives at github.com/LeouDev.</p>
+        <p class="p-foot" style="border:0;justify-content:flex-start;gap:var(--leading)"><a class="card-link" href="https://www.builtbyleou.info/" target="_blank" rel="noopener">builtbyleou.info</a><a class="card-link" href="https://github.com/LeouDev" target="_blank" rel="noopener">github.com/LeouDev</a></p>
       </aside>
+    </div>
+
+    <div class="pgrid three" style="margin-top:calc(1.5 * var(--leading))" aria-label="What clients say">
+      <figure class="pcell fade-up" style="margin:0">
+        <blockquote class="p-copy" style="margin:0">“Leou took our vision and turned it into a website that feels exactly like our brand—professional, simple, and easy for our customers to use.”</blockquote>
+        <figcaption class="p-foot"><span class="p-sub">Keith Pompey Tubilan</span><span class="muted" style="font-size:13px">Owner, Roll Up Cinnamons</span></figcaption>
+      </figure>
+      <figure class="pcell fade-up" style="margin:0">
+        <blockquote class="p-copy" style="margin:0">“Leou transformed our vision for APRRC '27 into a professional website that represents the scale and excitement of the conference.”</blockquote>
+        <figcaption class="p-foot"><span class="p-sub">Griffins Malazarte</span><span class="muted" style="font-size:13px">Conference Chair, APRRC '27</span></figcaption>
+      </figure>
+      <figure class="pcell fade-up" style="margin:0">
+        <blockquote class="p-copy" style="margin:0">“Leou captured the energy and discipline behind Fat Fueled and turned it into a website that truly represents our brand.”</blockquote>
+        <figcaption class="p-foot"><span class="p-sub">Lee Stephen Fat</span><span class="muted" style="font-size:13px">Owner/Coach, Fat Fueled</span></figcaption>
+      </figure>
     </div>
   </section>
 
@@ -278,7 +368,12 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
       <div class="row3 fade-up">
         <p class="f-num">03</p>
         <h3 class="f-title">Automation &amp; Efficiency</h3>
-        <p class="copy">Passionate about driving process efficiency through automation, consistently improving team-level performance metrics including <strong>NPS, AHT, Quality, and Accuracy</strong> scores.</p>
+        <p class="copy">Passionate about driving process efficiency through automation, consistently improving team-level performance metrics including <strong>NPS, AHT, Quality, and Accuracy</strong> scores — and built an internal <strong>Prior Authorization EMR</strong> that turns the weekly performance workbook into KPI checks, action items, and scorecards.</p>
+      </div>
+      <div class="row3 fade-up">
+        <p class="f-num">04</p>
+        <h3 class="f-title">Client Websites, Shipped</h3>
+        <p class="copy">Designed, built, and launched websites for <strong>APRRC '27</strong>, <strong>Roll Up Cinnamons</strong>, and <strong>Fat Fueled</strong> — plus <strong>AIR/Rally</strong>, live on the web and the App Store.</p>
       </div>
     </div>
   </section>
@@ -297,8 +392,16 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
         <ul class="skill-list"><li>Work Planning &amp; Prioritization</li><li>Process Improvement</li><li>Problem-Solving</li><li>Data-Driven Decision Making</li><li>Compliance Management</li></ul>
       </div>
       <div class="skill-row fade-up">
-        <h3>Development</h3>
-        <ul class="skill-list"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Supabase</li><li>Prisma</li><li>PostgreSQL</li><li>Stripe</li><li>Expo / React Native</li><li>Vite</li></ul>
+        <h3>Frontend</h3>
+        <ul class="skill-list"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Vite</li><li>Radix UI</li><li>Framer Motion</li><li>React Flow</li><li>Zustand</li><li>TanStack Query</li><li>React Hook Form · Zod</li><li>Recharts</li></ul>
+      </div>
+      <div class="skill-row fade-up">
+        <h3>Mobile</h3>
+        <ul class="skill-list"><li>React Native</li><li>Expo</li><li>React Native Skia</li><li>Swift</li><li>SwiftUI</li><li>SwiftData</li><li>Swift Charts</li><li>WidgetKit</li></ul>
+      </div>
+      <div class="skill-row fade-up">
+        <h3>Backend &amp; Deploy</h3>
+        <ul class="skill-list"><li>Supabase</li><li>PostgreSQL</li><li>Prisma</li><li>Drizzle ORM</li><li>Auth.js</li><li>PayMongo</li><li>Brevo</li><li>Vercel</li></ul>
       </div>
       <div class="skill-row fade-up">
         <h3>Tools &amp; Technology</h3>
@@ -350,6 +453,7 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
     <h2><span class="line">Open to opportunities.</span> <span class="line accent">Let's talk.</span></h2>
     <div class="row">
       <a class="btn btn-primary" href="mailto:leoualven.comendador@gmail.com">Email me</a>
+      <a class="btn btn-ghost ext" href="https://www.builtbyleou.info/" target="_blank" rel="noopener">Portfolio</a>
       <a class="btn btn-ghost ext" href="https://github.com/LeouDev" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
@@ -361,6 +465,7 @@ footer .fine { margin-top: var(--leading); font-size: 13px; color: color-mix(in 
       <div><span class="kicker">Email</span><a href="mailto:leoualven.comendador@gmail.com">leoualven.comendador@gmail.com</a></div>
       <div><span class="kicker">Phone</span><a href="tel:+639399029892">+63 939 902 9892</a></div>
       <div><span class="kicker">Location</span>Cebu City, Philippines</div>
+      <div><span class="kicker">Portfolio</span><a href="https://www.builtbyleou.info/" target="_blank" rel="noopener">builtbyleou.info</a></div>
       <div><span class="kicker">Code</span><a href="https://github.com/LeouDev" target="_blank" rel="noopener">github.com/LeouDev</a></div>
     </div>
     <p class="fine">© 2026 Leou Alven Comendador · Deputy Manager · Team Leader · Healthcare Operations · Builder</p>
